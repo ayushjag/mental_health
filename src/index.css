@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MoodTrack - Calming Mental Health Design System */
+
+
+@layer base {
+  :root {
+    /* Dark calming theme foundation */
+    --background: 225 15% 6%;
+    --foreground: 210 20% 95%;
+
+    --card: 225 15% 8%;
+    --card-foreground: 210 15% 92%;
+
+    --popover: 225 15% 8%;
+    --popover-foreground: 210 15% 92%;
+
+    /* Calming mental health colors */
+    --primary: 190 80% 50%;
+    --primary-foreground: 210 20% 98%;
+    --primary-glow: 190 80% 60%;
+
+    /* Secondary with soft teal */
+    --secondary: 170 40% 20%;
+    --secondary-foreground: 170 30% 85%;
+
+    --muted: 225 15% 12%;
+    --muted-foreground: 225 10% 55%;
+
+    --accent: 160 60% 45%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 225 15% 15%;
+    --input: 225 15% 12%;
+    --ring: 190 80% 50%;
+
+    --radius: 0.75rem;
+
+    /* Mental health theme colors */
+    --calming-teal: 190 80% 50%;
+    --soft-green: 160 60% 45%;
+    --aurora-blue: 200 100% 70%;
+    --glass: 225 15% 10%;
+    --glass-border: 225 25% 20%;
+
+    /* Gradients */
+    --gradient-aurora: linear-gradient(135deg, hsl(var(--calming-teal)), hsl(var(--aurora-blue)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--primary-glow) / 0.3), hsl(var(--soft-green) / 0.3));
+    --gradient-background: radial-gradient(ellipse at top right, hsl(var(--calming-teal) / 0.08), transparent 50%),
+                          radial-gradient(ellipse at bottom left, hsl(var(--aurora-blue) / 0.08), transparent 50%);
+
+    /* Shadows and effects */
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    --shadow-ai: 0 25px 50px -12px hsl(var(--primary) / 0.4);
+    --shadow-glass: 0 8px 32px hsl(var(--glass) / 0.5);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme colors */
+    --background: 225 15% 6%;
+    --foreground: 210 20% 95%;
+
+    --card: 225 15% 8%;
+    --card-foreground: 210 15% 92%;
+
+    --popover: 225 15% 8%;
+    --popover-foreground: 210 15% 92%;
+
+    --primary: 190 80% 50%;
+    --primary-foreground: 210 20% 98%;
+    --primary-glow: 190 80% 60%;
+
+    --secondary: 170 40% 20%;
+    --secondary-foreground: 170 30% 85%;
+
+    --muted: 225 15% 12%;
+    --muted-foreground: 225 10% 55%;
+
+    --accent: 160 60% 45%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 225 15% 15%;
+    --input: 225 15% 12%;
+    --ring: 190 80% 50%;
+
+    --calming-teal: 190 80% 50%;
+    --soft-green: 160 60% 45%;
+    --aurora-blue: 200 100% 70%;
+    --glass: 225 15% 10%;
+    --glass-border: 225 25% 20%;
+
+    --sidebar-background: 225 15% 8%;
+    --sidebar-foreground: 210 15% 92%;
+    --sidebar-primary: 190 80% 50%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 225 15% 12%;
+    --sidebar-accent-foreground: 210 15% 92%;
+    --sidebar-border: 225 15% 15%;
+    --sidebar-ring: 190 80% 50%;
+  }
+
+  /* Light theme */
+  .light {
+    --background: 210 20% 98%;
+    --foreground: 225 15% 15%;
+
+    --card: 210 20% 100%;
+    --card-foreground: 225 15% 15%;
+
+    --popover: 210 20% 100%;
+    --popover-foreground: 225 15% 15%;
+
+    --primary: 190 80% 40%;
+    --primary-foreground: 210 20% 98%;
+    --primary-glow: 190 80% 50%;
+
+    --secondary: 170 40% 90%;
+    --secondary-foreground: 170 40% 15%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 225 15% 40%;
+
+    --accent: 160 60% 35%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 225 15% 85%;
+    --input: 225 15% 95%;
+    --ring: 190 80% 40%;
+
+    --calming-teal: 190 80% 40%;
+    --soft-green: 160 60% 35%;
+    --aurora-blue: 200 100% 60%;
+    --glass: 210 20% 95%;
+    --glass-border: 225 25% 80%;
+
+    --sidebar-background: 210 20% 100%;
+    --sidebar-foreground: 225 15% 15%;
+    --sidebar-primary: 190 80% 40%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 210 20% 95%;
+    --sidebar-accent-foreground: 225 15% 15%;
+    --sidebar-border: 225 15% 85%;
+    --sidebar-ring: 190 80% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    background: var(--gradient-background);
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    @apply backdrop-blur-xl border;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-glass);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .light .glass {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Calming gradient button */
+  .btn-calming {
+    @apply relative overflow-hidden px-8 py-4 rounded-lg font-semibold text-white;
+    background: var(--gradient-aurora);
+    box-shadow: 0 20px 40px -10px hsl(var(--primary) / 0.3);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-calming:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow), 0 25px 50px -12px hsl(var(--primary) / 0.4);
+  }
+
+  .btn-calming::before {
+    @apply absolute inset-0 rounded-lg opacity-0;
+    content: '';
+    background: var(--gradient-glow);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-calming:hover::before {
+    opacity: 0.4;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+    transition: var(--transition-smooth);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px hsl(var(--primary) / 0.2);
+  }
+
+  /* Floating animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Pulse glow effect */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    to { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  @keyframes fade-in {
+    from { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Slide in from left */
+  .slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Slide in from right */
+  .slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
