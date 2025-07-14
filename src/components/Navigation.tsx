@@ -37,7 +37,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 fade-in">
             <div className="relative">
-              <Heart className="h-8 w-8 text-primary pulse-glow" />
+              <Heart className="h-8 w-8 text-primary" />
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-md"></div>
             </div>
             <span className="text-xl font-bold text-white">MoodTrack</span>
